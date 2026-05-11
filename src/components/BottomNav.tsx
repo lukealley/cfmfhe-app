@@ -15,30 +15,24 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
 
 export default function BottomNav({ active, onChange }: Props) {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 safe-bottom z-50">
-      <div className="flex">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-sand-200 safe-bottom z-50 shadow-[0_-1px_8px_rgba(0,0,0,0.06)]">
+      <div className="flex max-w-lg mx-auto">
         {tabs.map((tab) => {
           const isActive = active === tab.id
           return (
             <button
               key={tab.id}
               onClick={() => onChange(tab.id)}
-              className={`flex-1 flex flex-col items-center justify-center py-2 gap-0.5 transition-colors ${
-                isActive
-                  ? 'text-teal-600'
-                  : 'text-gray-400 active:text-teal-500'
-              }`}
+              className="flex-1 flex flex-col items-center justify-center py-2.5 gap-0.5 relative transition-colors"
             >
               <span className="text-xl leading-none">{tab.icon}</span>
-              <span
-                className={`text-[10px] font-semibold leading-tight text-center ${
-                  isActive ? 'text-teal-600' : 'text-gray-400'
-                }`}
-              >
+              <span className={`text-[10px] font-medium leading-tight text-center transition-colors ${
+                isActive ? 'text-sage-500' : 'text-gray-400'
+              }`}>
                 {tab.label}
               </span>
               {isActive && (
-                <span className="absolute bottom-0 w-8 h-0.5 bg-teal-500 rounded-full" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-sage-400 rounded-full" />
               )}
             </button>
           )

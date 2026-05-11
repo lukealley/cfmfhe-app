@@ -8,30 +8,22 @@ import Subscription from './pages/Subscription'
 
 export type Tab = 'welcome' | 'my-lessons' | 'past-lessons' | 'vault' | 'subscription'
 
-const PAGE_TITLES: Record<Tab, string> = {
-  'welcome':      'Welcome!',
-  'my-lessons':   'My Lessons',
-  'past-lessons': 'Past Lessons',
-  'vault':        'The Vault',
-  'subscription': 'Subscription',
-}
-
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('welcome')
 
   return (
-    <div className="flex flex-col h-full max-w-lg mx-auto bg-gray-50">
+    <div className="flex flex-col h-full max-w-lg mx-auto bg-cream">
       {/* Top header */}
-      <header className="flex-shrink-0 bg-white border-b border-gray-100 px-4 py-3 flex items-center gap-3 shadow-sm">
-        <div className="w-8 h-8 rounded-lg bg-teal-500 flex items-center justify-center flex-shrink-0">
-          <span className="text-white text-sm font-extrabold leading-none">CFM</span>
+      <header className="flex-shrink-0 bg-white border-b border-sand-200 px-5 py-4 flex items-center gap-3">
+        <div className="w-9 h-9 rounded-full bg-sage-400 flex items-center justify-center flex-shrink-0">
+          <span className="text-white text-[10px] font-bold leading-none tracking-tight">CFM</span>
         </div>
         <div>
-          <p className="text-[10px] font-semibold uppercase tracking-widest text-teal-500 leading-none">
+          <p className="text-[10px] font-medium uppercase tracking-widest text-sage-500 leading-none">
             Come Follow Me
           </p>
-          <p className="text-sm font-extrabold text-gray-800 leading-tight">
-            {PAGE_TITLES[activeTab]}
+          <p className="text-sm font-semibold text-charcoal leading-tight font-serif">
+            Family Home Evening
           </p>
         </div>
       </header>
@@ -45,7 +37,6 @@ export default function App() {
         {activeTab === 'subscription' && <Subscription />}
       </main>
 
-      {/* Bottom nav */}
       <BottomNav active={activeTab} onChange={setActiveTab} />
     </div>
   )

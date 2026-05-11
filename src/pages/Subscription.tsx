@@ -1,20 +1,20 @@
 export default function Subscription() {
   return (
-    <div className="px-4 py-6 space-y-5">
+    <div className="px-5 py-7 space-y-6">
       <div>
-        <h1 className="text-xl font-extrabold text-gray-800">Subscription</h1>
-        <p className="text-sm text-gray-500 mt-0.5">
+        <h1 className="font-serif text-2xl font-semibold text-charcoal">Subscription</h1>
+        <p className="text-sm text-gray-400 mt-1">
           Manage your billing and payment options
         </p>
       </div>
 
-      {/* Current plan card */}
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="bg-gradient-to-r from-teal-500 to-teal-600 px-5 py-4">
-          <p className="text-xs font-bold uppercase tracking-widest text-teal-100">
+      {/* Current plan */}
+      <div className="bg-white rounded-2xl border border-sand-200 shadow-sm overflow-hidden">
+        <div className="bg-dust-100 border-b border-dust-200 px-5 py-4">
+          <p className="text-xs font-medium uppercase tracking-widest text-dust-400 mb-0.5">
             Current Plan
           </p>
-          <p className="text-xl font-extrabold text-white mt-0.5">
+          <p className="font-serif text-lg font-semibold text-charcoal">
             CFM FHE Subscriber
           </p>
         </div>
@@ -51,10 +51,7 @@ export default function Subscription() {
 
       <p className="text-xs text-center text-gray-400 pb-2">
         Questions? Email us at{' '}
-        <a
-          href="mailto:hello@comefollowmefhe.com"
-          className="text-teal-500 font-semibold"
-        >
+        <a href="mailto:hello@comefollowmefhe.com" className="text-sage-500 font-medium">
           hello@comefollowmefhe.com
         </a>
       </p>
@@ -65,20 +62,16 @@ export default function Subscription() {
 function FeatureRow({ label }: { label: string }) {
   return (
     <div className="flex items-center gap-3">
-      <svg className="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <svg className="w-4 h-4 text-sage-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
-      <span className="text-sm text-gray-700">{label}</span>
+      <span className="text-sm text-gray-500">{label}</span>
     </div>
   )
 }
 
 function ActionButton({
-  label,
-  description,
-  icon,
-  href,
-  danger = false,
+  label, description, icon, href, danger = false,
 }: {
   label: string
   description: string
@@ -91,20 +84,18 @@ function ActionButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex items-center gap-4 rounded-xl px-4 py-3.5 border shadow-sm active:opacity-80 transition-opacity ${
-        danger
-          ? 'bg-red-50 border-red-100'
-          : 'bg-white border-gray-100'
+      className={`flex items-center gap-4 rounded-2xl px-4 py-4 border shadow-sm active:opacity-80 transition-opacity ${
+        danger ? 'bg-white border-red-100' : 'bg-white border-sand-200'
       }`}
     >
       <span className="text-xl">{icon}</span>
       <div className="flex-1">
-        <p className={`text-sm font-bold ${danger ? 'text-red-600' : 'text-gray-800'}`}>
+        <p className={`text-sm font-semibold ${danger ? 'text-red-400' : 'text-charcoal'}`}>
           {label}
         </p>
-        <p className="text-xs text-gray-400">{description}</p>
+        <p className="text-xs text-gray-400 mt-0.5">{description}</p>
       </div>
-      <svg className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-4 h-4 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
       </svg>
     </a>

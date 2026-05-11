@@ -4,25 +4,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        teal: {
-          50:  '#f0fafa',
-          100: '#d0f0ee',
-          200: '#a2e1dd',
-          300: '#6dccc6',
-          400: '#3eb8b1',
-          500: '#2aa39c',
-          600: '#218480',
-          700: '#1a6a67',
-          800: '#155250',
-          900: '#103f3d',
+        cream:   '#FAF7F2',
+        charcoal:'#333333',
+        sage: {
+          100: '#edf0ec',
+          200: '#d4dcd2',
+          300: '#bccab9',
+          400: '#A8B5A2',
+          500: '#8fa088',
+          600: '#728070',
         },
-        gold: {
-          400: '#e8c56a',
-          500: '#d4a843',
+        dust: {
+          100: '#e8eff5',
+          200: '#d0e0eb',
+          300: '#AFC6D9',
+          400: '#91afc6',
+          500: '#7298b3',
+        },
+        sand: {
+          100: '#f5ede0',
+          200: '#ecdbc4',
+          300: '#D8C3A5',
+          400: '#c4a882',
+          500: '#a98a61',
+        },
+        peach: {
+          100: '#faf0ea',
+          200: '#f5dfd3',
+          300: '#EBC9B5',
+          400: '#dca f96',
+          500: '#cc9478',
         },
       },
       fontFamily: {
-        sans: ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans:  ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        '2xs': '0.65rem',
       },
     },
   },

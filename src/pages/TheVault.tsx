@@ -2,35 +2,37 @@ import vault from '../data/vault'
 
 export default function TheVault() {
   return (
-    <div className="px-4 py-6 space-y-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-xl font-extrabold text-gray-800">The Vault</h1>
-        <p className="text-sm text-gray-500 mt-0.5">
-          A special bonus resource, just for you
+    <div className="px-5 py-7 space-y-6">
+      <div className="text-center">
+        <p className="text-xs font-medium uppercase tracking-widest text-sage-500 mb-1">
+          Monthly Bonus
         </p>
+        <h1 className="font-serif text-2xl font-semibold text-charcoal leading-snug">
+          The Vault
+        </h1>
+        <div className="w-10 h-px bg-sand-300 mx-auto mt-3" />
       </div>
 
-      {/* Hero card */}
-      <div className="rounded-2xl bg-gradient-to-br from-gold-400 to-gold-500 text-white shadow-md overflow-hidden">
-        <div className="px-5 pt-6 pb-4">
-          <p className="text-xs font-bold uppercase tracking-widest text-yellow-100 mb-1">
+      {/* Resource card */}
+      <div className="bg-white rounded-2xl border border-peach-200 shadow-sm overflow-hidden">
+        <div className="bg-peach-100 px-5 pt-7 pb-5 text-center">
+          <div className="text-5xl mb-4">{vault.emoji}</div>
+          <p className="text-xs font-medium uppercase tracking-widest text-peach-400 mb-1">
             {vault.month}
           </p>
-          <div className="text-5xl mb-3">{vault.emoji}</div>
-          <h2 className="text-xl font-extrabold mb-2 leading-tight">
+          <h2 className="font-serif text-xl font-semibold text-charcoal leading-snug">
             {vault.title}
           </h2>
-          <p className="text-sm text-yellow-100 leading-relaxed">
+        </div>
+        <div className="px-5 py-5 space-y-4">
+          <p className="text-sm text-gray-500 leading-relaxed text-center">
             {vault.description}
           </p>
-        </div>
-        <div className="px-5 pb-5 pt-2">
           <a
             href={vault.driveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center bg-white text-yellow-700 font-bold text-sm py-3 rounded-xl shadow active:opacity-90 transition-opacity"
+            className="block w-full text-center bg-sand-300 hover:bg-sand-400 text-charcoal font-semibold text-sm py-3.5 rounded-xl transition-colors"
           >
             Download My Resource →
           </a>
@@ -38,14 +40,13 @@ export default function TheVault() {
       </div>
 
       {/* Love note */}
-      <div className="bg-teal-50 border border-teal-100 rounded-xl px-5 py-4 text-center">
+      <div className="bg-sage-100 border border-sage-200 rounded-2xl px-5 py-5 text-center">
         <p className="text-2xl mb-2">💛</p>
-        <p className="text-sm font-semibold text-teal-700">
+        <p className="font-serif text-base font-semibold text-charcoal mb-1">
           We LOVE our subscribers!
         </p>
-        <p className="text-xs text-teal-600 mt-1 leading-relaxed">
-          Check back every month for a fresh surprise bonus resource—our thank-you
-          for being part of the CFM FHE family.
+        <p className="text-xs text-gray-500 leading-relaxed">
+          A fresh surprise bonus resource every month — our thank-you for being part of the CFM FHE family.
         </p>
       </div>
     </div>
