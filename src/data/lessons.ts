@@ -12,59 +12,60 @@ export interface LessonWeek {
   lessons: Lesson[]
 }
 
-// Update these Google Drive links with your actual file links
-export const currentWeeks: LessonWeek[] = [
-  {
-    label: 'This Week',
-    lessons: [
-      {
-        id: 'tw-1',
-        title: 'Toddler Lesson',
-        subtitle: 'This week\'s toddler lesson packet',
-        week: 'This Week',
-        driveUrl: 'https://drive.google.com/file/d/1SgWcYieUPCcc7f6-H_4OAaRQOXPcB32j/view?usp=sharing',
-        tags: ['PDF'],
-      },
-      {
-        id: 'tw-2',
-        title: 'Primary Lesson',
-        subtitle: 'This week\'s primary lesson packet',
-        week: 'This Week',
-        driveUrl: 'https://drive.google.com/file/d/1HtzhaI9ZMIncyaJnsbDGBdqc6ARUIlxk/view?usp=sharing',
-        tags: ['PDF'],
-      },
-      {
-        id: 'tw-3',
-        title: 'Elementary Lesson',
-        subtitle: 'This week\'s elementary lesson packet',
-        week: 'This Week',
-        driveUrl: 'https://drive.google.com/file/d/140tyOv8XjVE_tGGnmYneRrBLmohL1jRe/view?usp=sharing',
-        tags: ['PDF'],
-      },
-    ],
-  },
-  {
-    label: 'Next Week',
-    lessons: [
-      {
-        id: 'nw-1',
-        title: 'Lesson Packet',
-        subtitle: 'Full lesson plan + activities',
-        week: 'Next Week',
-        driveUrl: 'https://drive.google.com/your-link-here',
-        tags: ['PDF'],
-      },
-      {
-        id: 'nw-2',
-        title: 'Coloring Pages',
-        subtitle: 'Printable coloring sheets',
-        week: 'Next Week',
-        driveUrl: 'https://drive.google.com/your-link-here',
-        tags: ['PDF'],
-      },
-    ],
-  },
-]
+export interface CurrentLesson {
+  lessonNumber: string
+  title: string
+  dates: string
+  scripture: string
+  intro: string
+  bundles: Bundle[]
+}
+
+export interface Bundle {
+  id: string
+  label: string
+  subtitle: string
+  emoji: string
+  driveUrl: string
+}
+
+export const currentLesson: CurrentLesson = {
+  lessonNumber: 'Lesson 20',
+  title: '"Beware Lest Thou Forget the Lord"',
+  dates: 'May 11–17',
+  scripture: 'Deuteronomy 6–8; 15; 18; 29–30; 34',
+  intro: 'Moses taught that faith is best nurtured through the natural rhythms of family life rather than through formal lessons alone. He commanded parents: "Thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way" (Deuteronomy 6:7). Integrating gospel conversations into daily activities helps our children guard against "forgetting the Lord" during times of ease and prosperity.\n\nThis teaching prepares children to "choose life" by loving God with all their hearts. By modeling service and a "willing heart," we can lead our families toward Jesus Christ, the great Prophet whom Moses foreshadowed.',
+  bundles: [
+    {
+      id: 'b-1',
+      label: 'Toddler Bundle',
+      subtitle: 'Home & Nursery',
+      emoji: '🧸',
+      driveUrl: 'https://drive.google.com/file/d/1SgWcYieUPCcc7f6-H_4OAaRQOXPcB32j/view?usp=sharing',
+    },
+    {
+      id: 'b-2',
+      label: 'Elementary Bundle',
+      subtitle: 'Home & Primary',
+      emoji: '✏️',
+      driveUrl: 'https://drive.google.com/file/d/140tyOv8XjVE_tGGnmYneRrBLmohL1jRe/view?usp=sharing',
+    },
+    {
+      id: 'b-3',
+      label: 'Primary Bundle',
+      subtitle: 'Home & Primary',
+      emoji: '📖',
+      driveUrl: 'https://drive.google.com/file/d/1HtzhaI9ZMIncyaJnsbDGBdqc6ARUIlxk/view?usp=sharing',
+    },
+    {
+      id: 'b-4',
+      label: 'Teen Bundle',
+      subtitle: 'Home & Sunday School',
+      emoji: '🎒',
+      driveUrl: 'https://drive.google.com/your-teen-bundle-link-here',
+    },
+  ],
+}
 
 export const pastLessons: Lesson[] = [
   {
